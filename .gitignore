@@ -10,3 +10,7 @@ buildNumber.properties
 src/main/resources/config.properties
 src/main/resources/urls.properties
 .DS_Store
+.classpath
+.project
+.settings/
+log/
