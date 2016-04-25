@@ -5,6 +5,12 @@ a discord bot written with [Javacord](https://github.com/BtoBastian/JavacordBot)
 remove -example from the property files and enter your own bot token/player names and links
 
 #Usage
+get the bot to join your server by replacing CLIENT_ID with the id of the bot and following the link
+```
+https://discordapp.com/oauth2/authorize?&client_id=CLIENT_ID&scope=bot
+```
+
+to receive a response from the bot
 ```
 .dotabuff <name>
 ```
