@@ -1,5 +1,5 @@
 # DotabuffBot
-a bot for discord to quickly get a link to dotabuff for a specified player
+a discord bot written with [Javacord](https://github.com/BtoBastian/JavacordBot) to quickly get a link to dotabuff for a specified player
 
 #Config setup
 remove -example from the property files and enter your own bot token/player names and links
@@ -15,4 +15,3 @@ mvn clean package
 cd target
 java -jar discordbot-1.0-jar-with-dependencies.jar
 ```
-
