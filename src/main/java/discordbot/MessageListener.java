@@ -10,8 +10,8 @@ import de.btobastian.javacord.listener.message.MessageCreateListener;
 public class MessageListener implements MessageCreateListener {
 
 	Properties prop;
-	
-	public MessageListener(){
+
+	public MessageListener() {
 		prop = new Properties();
 		try {
 			prop.load(getClass().getResourceAsStream("/urls.properties"));
@@ -20,27 +20,26 @@ public class MessageListener implements MessageCreateListener {
 		}
 
 	}
-	
+
 	@Override
 	public void onMessageCreate(DiscordAPI api, Message message) {
 
-		if(message.getContent().startsWith(".")){
+		if (message.getContent().startsWith(".")) {
 			String command = message.getContent().substring(1);
 			String[] split = command.split(" ");
-			if(split[0].equals("dotabuff")){
-				if(prop.getProperty(split[1]) == null){
+			if (split[0].equals("dotabuff")) {
+				if (split.length < 2 || prop.getProperty(split[1]) == null) {
 					message.reply("Invalid name");
-				}
-				else{
+				} else {
 					message.reply(prop.getProperty(split[1]));
 				}
 			}
-		}
-		else{
+		} else {
 
 			switch (message.getContent()) {
 			case "Kappa":
-				message.reply("http://res.cloudinary.com/urbandictionary/image/upload/a_exif,c_fit,h_200,w_200/v1395991705/gjn81wvxqsq6yzcwubok.png");
+				message.reply(
+						"http://res.cloudinary.com/urbandictionary/image/upload/a_exif,c_fit,h_200,w_200/v1395991705/gjn81wvxqsq6yzcwubok.png");
 				break;
 			case "BibleThump":
 				message.reply("https://pbs.twimg.com/profile_images/577309793104175104/y2jIo9dq.png");
